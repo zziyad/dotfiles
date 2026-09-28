@@ -1,0 +1,3 @@
+.config/nvim/lazy-lock.json.bak
+*.bak-*
+.DS_Store
