@@ -22,3 +22,6 @@ end
 -- (no system gcc; zig 0.14 rejects LLVM triples like x86_64-unknown-linux-gnu)
 vim.env.CC = vim.fn.expand("~/.local/bin/zigcc")
 vim.env.CXX = vim.fn.expand("~/.local/bin/zigcc")
+
+-- Dark terminal: skip Neovim's OSC 11 background probe (leaks under tmux+WT).
+vim.o.background = "dark"

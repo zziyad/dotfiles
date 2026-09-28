@@ -56,5 +56,11 @@ path=("$HOME/.local/bin" $path)
 export PATH
 
 
+
+# Tell apps the terminal is dark (fg=15 white, bg=0 black) so they skip OSC 11
+# background queries. Helps nvim/other detectors; tmux itself still needs
+# escape-time (see ~/.tmux.conf) because it queries OSC 11 on attach.
+export COLORFGBG='15;0'
+
 # Prompt: Starship (git branch/status)
 eval "$(starship init zsh)"
