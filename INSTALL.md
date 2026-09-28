@@ -1,4 +1,4 @@
-# Reinstall notes (finance@financeServer)
+# Reinstall notes
 
 No sudo was available. Packages were installed user-locally from Debian trixie `.deb` extracts:
 

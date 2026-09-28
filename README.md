@@ -1,6 +1,6 @@
-# finance@financeServer dotfiles
+# Dotfiles
 
-Snapshot of shell / tmux / Neovim (LazyVim) config for the `finance` user.
+Snapshot of shell / tmux / Neovim (LazyVim) config for the login user on this host.
 **You create the GitHub repo and push yourself** — this folder is prepared only.
 
 ## What is installed on the server (already done)
@@ -58,7 +58,7 @@ cd ~/dotfiles
 git init
 git add .zshrc .tmux.conf .config/nvim README.md INSTALL.md
 git status   # review; avoid committing secrets
-git commit -m "Initial financeServer dotfiles: zsh, tmux, LazyVim"
+git commit -m "Initial dotfiles: zsh, tmux, LazyVim"
 # create empty repo on GitHub (web UI or gh), then:
 git branch -M main
 git remote add origin git@github.com:zziyad/DOTFILES_REPO_NAME.git
@@ -66,12 +66,13 @@ git remote add origin git@github.com:zziyad/DOTFILES_REPO_NAME.git
 git push -u origin main
 ```
 
-Replace `DOTFILES_REPO_NAME` with whatever you create (e.g. `financeserver-dotfiles`).
+Replace `DOTFILES_REPO_NAME` with whatever you create (e.g. `dotfiles`).
 
 ## Quick usage
 
 ```bash
-ssh finance@100.92.131.118   # lands in zsh via bashrc exec
+# SSH into the host (Tailscale); lands in zsh via bashrc exec
+ssh user@host
 tmux new -s main             # new session (zsh panes)
 tmux attach -t main          # reattach
 NO_ZSH_EXEC=1 bash           # stay in bash if needed
