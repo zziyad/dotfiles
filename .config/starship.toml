@@ -1,0 +1,28 @@
+format = "$directory$git_branch$git_status$character"
+
+[directory]
+style = "bold blue"
+truncation_length = 3
+
+[git_branch]
+symbol = " "
+style = "bold cyan"
+format = "[$symbol$branch]($style) "
+
+[git_status]
+style = "bold yellow"
+conflicted = "⚔"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+untracked = "?"
+stashed = "$"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
